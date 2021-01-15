@@ -69,19 +69,21 @@ $end = isset($_REQUEST['to']) ? $_REQUEST['to'] : '';
                 }
                 $i+=1;
                 $total+=$farmer_total;
-                echo "<tr>";
-                echo '<td>' . $i . '</td>';
-                //echo "<td valign='top'>" . nl2br( $row['id']) . "</td>";  
-                echo "<td valign='top'>" . nl2br($farmer['f_no']) . "</td>";
-                echo "<td valign='top'>" . nl2br($farmer['f_name']) . "</td>";
-                echo "<td valign='top'>" . nl2br($farmer['last_paid']) . "</td>";
-                echo "<td valign='top'>" . $farmer_total . "</td>";
-                if ($start > $farmer['last_paid']) {
-                    echo "<td valign='top'><a href='pay.php?f_no=$f_no&start=$start&end=$end' class='btn btn-info'>Pay</a></td>";
-                } else {
-                    echo "<td valign='top'><a href='#' class='btn btn-danger'>Paid</a></td>";
+                if($farmer_total>0){
+                    echo "<tr>";
+                    echo '<td>' . $i . '</td>';
+                    //echo "<td valign='top'>" . nl2br( $row['id']) . "</td>";  
+                    echo "<td valign='top'>" . nl2br($farmer['f_no']) . "</td>";
+                    echo "<td valign='top'>" . nl2br($farmer['f_name']) . "</td>";
+                    echo "<td valign='top'>" . nl2br($farmer['last_paid']) . "</td>";
+                    echo "<td valign='top'>" . $farmer_total . "</td>";
+                    if ($start > $farmer['last_paid']) {
+                        echo "<td valign='top'><a href='pay.php?f_no=$f_no&start=$start&end=$end' class='btn btn-info'>Pay</a></td>";
+                    } else {
+                        echo "<td valign='top'><a href='#' class='btn btn-danger'>Paid</a></td>";
+                    }
+                    echo "</tr>";
                 }
-                echo "</tr>";
             }
             echo "<tr class='success'><td><strong>Total</strong></td><td><strong>All</strong><td>--</td><td>--</td><td>$total Kgs</td><td>--</td></tr>";
         }

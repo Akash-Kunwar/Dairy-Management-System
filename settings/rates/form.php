@@ -23,7 +23,7 @@
     <div class="form-group">
         <label class="control-label" for="rate"> Price (per liter)</label >
         <div class="controls">
-            <input class="input-xlarge" type="text" placeholder="4**" name='rate' id='r_kg' value='<?php echo stripslashes($row['rate']) ?>'/> 
+            <input class="input-xlarge" type="text" placeholder="price" name='rate' id='r_kg' value='<?php echo stripslashes($row['rate']) ?>'/> 
     </div>
     </div>  <div class="form-group">
 

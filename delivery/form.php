@@ -13,9 +13,9 @@
 
     </div>
     <div class="form-group">
-        <label class="control-label" for="r_kg"> Milk in Kgs:</label >
+        <label class="control-label" for="r_kg"> Milk in Liters:</label >
         <div class="controls">
-            <input class="input-xlarge" type="text" placeholder="4**" name='r_kg' value='<?php echo isset($row)?stripslashes($row['r_kg']):''; ?>'/> 
+            <input class="input-xlarge" type="text" placeholder="Liters" name='r_kg' value='<?php echo isset($row)?stripslashes($row['r_kg']):''; ?>'/> 
             <?php echo $validation['kg'] ?>
         </div>
     </div>
